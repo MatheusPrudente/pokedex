@@ -1,3 +1,3 @@
 # pokedex
 
-![image](https://github.com/MatheusPrudente/pokedex/assets/80559882/919ec401-71ec-4d5a-b538-8804ee4ad45b)
+![print](https://github.com/MatheusPrudente/pokedex/assets/80559882/bb78988a-7d4e-4cd3-9a61-7279092d6871)
