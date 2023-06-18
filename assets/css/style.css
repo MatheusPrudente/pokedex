@@ -116,7 +116,7 @@ main {
   padding: 20px;
 }
 
-#pokedex-title {
+#pokedex, #search{
   margin-bottom: 30px;
 }
 
@@ -168,6 +168,7 @@ main div#pokemon-card-images {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 125px;
 }
 
 main img#pokemon-image-back {
@@ -182,6 +183,135 @@ main img#pokemon-image {
   z-index: 1;
 }
 
+#pokeball {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#mainball {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 7px solid #000;
+  border-radius: 50%;
+  overflow: hidden;
+  animation: codebeauty .25s ease-in-out, spin 3s ease-in-out 3;
+}
+
+#mainball::before, .mainball::after {
+  content: '';
+  position: absolute;
+}
+
+#mainball::before {
+  background-color: #cd3939;
+  width: 100%;
+  height: 50%;
+}
+
+#mainball::after {
+  top: calc(50% - 5px);
+  width: 100%;
+  height: 9px;
+  background-color: #000;
+}
+
+#pokebutton {
+  position: absolute;
+  top: calc(50% - 7px);
+  left: calc(50% - 7px);
+  width: 14px;
+  height: 14px;
+  background: #7f8c8d;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 0 0 8px #000;
+  animation: buttonglow 3s ease-in-out 3;
+}
+
+#search {
+  display: grid;
+  gap: 10px;
+  grid-template-columns:  1fr 50px;
+}
+
+#search-pokemon {
+  border: transparent;
+  background-color: #d7dfe1;
+  border-radius: 8px;
+  padding-left: 10px;
+}
+
+#search-pokemon:active {
+  border: 1px solid #5d5f7e;
+}
+
+#search-pokemon::placeholder {
+  margin-left: 10px;
+  font-weight: 300;
+}
+
+#search-filter {
+  background-color: #5d5f7e;
+  padding-inline: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #5d5f7e;
+}
+
+#search-filter:hover {
+  cursor: pointer;
+  background-color: #4d4f66;
+  border: 2px solid black;
+}
+
+@keyframes codebeauty {
+  0% {
+    top : -500px;
+  }
+  50% {
+    top : 0px;
+  }
+  75% {
+    top : -30px;
+  }
+  100% {
+    top : 0px;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes buttonglow {
+  0% {
+    background: #7f8c8d;
+  }
+  50% {
+    background: #cd3939;
+  }
+  100% {
+    background: #7f8c8d;
+  }
+}
+
 @media (max-width: 800px) {
   main div#pokemons {
     grid-template-columns: repeat(3,1fr);
@@ -194,7 +324,7 @@ main img#pokemon-image {
   }
 
   main div#pokemon-card {
-    width: 140px;
+    width: 100%;
   }
 }
 

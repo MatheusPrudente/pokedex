@@ -22,18 +22,31 @@
       <h1 id="pokedex-title">
         Pok&eacute;dex
       </h1>
+      <p id="pokedex-subtitle">Search for a Pok&eacute;mon by name or using its Nacional Pok&eacute;dex number.</p>
+    </div>
+    <div id="search">
+      <input type="text" name="" id="search-pokemon" placeholder="Name or Number">
+      <button id="search-filter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 256 256"><path d="M40,88H73a32,32,0,0,0,62,0h81a8,8,0,0,0,0-16H135a32,32,0,0,0-62,0H40a8,8,0,0,0,0,16Zm64-24A16,16,0,1,1,88,80,16,16,0,0,1,104,64ZM216,168H199a32,32,0,0,0-62,0H40a8,8,0,0,0,0,16h97a32,32,0,0,0,62,0h17a8,8,0,0,0,0-16Zm-48,24a16,16,0,1,1,16-16A16,16,0,0,1,168,192Z"></path></svg>
+      </button>
     </div>
     <div id="pokemons">
     </div>
+    <div id="pokeball">
+      <div id="mainball">
+        <div id="pokebutton">
+        </div>
+      </div>
+    </div>
   </main>
-  <a href="url" id="pokemon-link">
+  <a href="url" id="pokemon-link" style="display: none;">
     <div id="pokemon-card">
       <div id="pokemon-card-id">
         <span id="pokemon-id"></span>
       </div>
       <div id="pokemon-card-images">
-        <img id="pokemon-image-back"src="./assets/images/download.png">
-        <img src="#" alt="pokemon" id="pokemon-image">
+        <img loading="lazy" id="pokemon-image-back"src="./assets/images/download.png">
+        <img loading="lazy" src="#" alt="pokemon" id="pokemon-image">
       </div>
       <h1 id="pokemon-data">
         <h4 id="pokemon-name"></h4>
